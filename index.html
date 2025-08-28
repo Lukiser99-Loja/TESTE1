@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema Troca de Óleo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">Cadastro de Atendimento</h2>
+    <form id="form" class="space-y-2">
+      <input type="text" id="nome" placeholder="Nome do Cliente" class="w-full border rounded-lg p-2 text-sm sm:text-base" required>
+      <input type="text" id="cpf" placeholder="CPF"  class="w-full border rounded-lg p-2 text-sm sm:text-base" required>
+      <input type="text" id="carro" placeholder="Carro"  class="w-full border rounded-lg p-2 text-sm sm:text-base" required>
+      <input type="text" id="placa" placeholder="Placa"  class="w-full border rounded-lg p-2 text-sm sm:text-base" required>
+      <input type="text" id="telefone" placeholder="Telefone"  class="w-full border rounded-lg p-2 text-sm sm:text-base" required>
+
+      <h3 class="text-lg font-semibold mt-4">Serviços</h3>
+<div class="grid grid-cols-2 gap-2 text-sm">
+  <label>
+    Filtro de Óleo
+    <select class="w-full border rounded-lg p-1" id="filtro-oleo">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Filtro de Ar
+    <select class="w-full border rounded-lg p-1" id="filtro-ar">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Filtro de Combustível
+    <select class="w-full border rounded-lg p-1" id="filtro-combustivel">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Filtro de Ar Cond.
+    <select class="w-full border rounded-lg p-1" id="filtro-ar-cond">
+      
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Higienização
+    <select class="w-full border rounded-lg p-1" id="higienizacao">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Lqd. Arredecimento
+    <select class="w-full border rounded-lg p-1" id="liquido-arredecimento">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Limp. Radiador
+    <select class="w-full border rounded-lg p-1" id="limpeza-radiador">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Limp. TBI
+    <select class="w-full border rounded-lg p-1" id="limpeza-tbi">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Limp. Direção
+    <select class="w-full border rounded-lg p-1" id="limpeza-direcao">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Troca Fluído Freio
+    <select class="w-full border rounded-lg p-1" id="fluido-freio">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Óleo de Cambio
+    <select class="w-full border rounded-lg p-1" id="oleo-cambio">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Óleo Direção
+    <select class="w-full border rounded-lg p-1" id="oleo-direcao">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Velas
+    <select class="w-full border rounded-lg p-1" id="velas">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Pastilhas
+    <select class="w-full border rounded-lg p-1" id="pastilhas">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Palhetas
+    <select class="w-full border rounded-lg p-1" id="palhetas">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Cabos de Velas
+    <select class="w-full border rounded-lg p-1" id="cabos-velas">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Descabonização
+    <select class="w-full border rounded-lg p-1" id="descabonizacao">
+      <option value="---"></option>
+      <option value="Feito">Feito</option>
+      <option value="Pendente">Pendente</option>
+      <option value="N/A">N/A</option>
+    </select>
+  </label>
+
+  <label>
+    Valor Final
+    <input type="text" id="valor-final" class="w-full border rounded-lg p-1" placeholder="R$ 0,00" required>
+  </label>
+
+</div>
+
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+        Salvar Atendimento
+      </button>
+    </form>
+  </div>
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-2xl p-6 overflow-x-auto">
+  <h2 class="text-2xl font-bold text-gray-800 mb-4">Histórico de Atendimentos</h2>
+  
+  <!-- A tabela agora rola na horizontal em telas pequenas -->
+  <table class="w-full text-sm border min-w-[800px]">
+    <thead>
+      <tr class="bg-gray-200 text-xs sm:text-sm">
+        <th class="border px-2 py-1">Nome</th>
+        <th class="border px-2 py-1">CPF</th>
+        <th class="border px-2 py-1">Carro</th>
+        <th class="border px-2 py-1">Placa</th>
+        <th class="border px-2 py-1">Telefone</th>
+        <th class="border px-2 py-1">Filtro de Óleo</th>
+        <th class="border px-2 py-1">Filtro de Ar</th>
+        <th class="border px-2 py-1">Filtro de Combustível</th>
+        <th class="border px-2 py-1">Filtro de Ar Cond.</th>
+        <th class="border px-2 py-1">Higienização</th>
+        <th class="border px-2 py-1">Lqd. Arrefecimento</th>
+        <th class="border px-2 py-1">Limp. Radiador</th>
+        <th class="border px-2 py-1">Limp. TBI</th>
+        <th class="border px-2 py-1">Limp. Direção</th>
+        <th class="border px-2 py-1">Troca Fluído Freio</th>
+        <th class="border px-2 py-1">Óleo de Câmbio</th>
+        <th class="border px-2 py-1">Óleo Direção</th>
+        <th class="border px-2 py-1">Velas</th>
+        <th class="border px-2 py-1">Pastilhas</th>
+        <th class="border px-2 py-1">Palhetas</th>
+        <th class="border px-2 py-1">Cabos de Velas</th>
+        <th class="border px-2 py-1">Descarbonização</th>
+        <th class="border px-2 py-1">Data</th>
+        <th class="border px-2 py-1">Valor Final (R$)</th>
+      </tr>
+    </thead>
+    <tbody id="tabela" class="text-center"></tbody>
+  </table>
+  </div>
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>
